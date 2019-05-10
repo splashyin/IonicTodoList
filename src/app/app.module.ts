@@ -5,17 +5,21 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AmplifyAngularModule, AmplifyService, AmplifyIonicModule } from 'aws-amplify-angular';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    AmplifyAngularModule,
+    AmplifyIonicModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule
   ],
   providers: [
+    AmplifyService,
     StatusBar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
