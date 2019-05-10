@@ -1,0 +1,14 @@
+{
+	"auth": {
+		"cognito552c4898": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"analytics": {
+		"haoyinfancytodos": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+{
+    "haoyin": {
+        "awscloudformation": {
+            "AuthRoleName": "haoyin-fancy-todos-haoyin-20190510135840-authRole",
+            "UnauthRoleArn": "arn:aws:iam::720854520170:role/haoyin-fancy-todos-haoyin-20190510135840-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::720854520170:role/haoyin-fancy-todos-haoyin-20190510135840-authRole",
+            "Region": "ap-southeast-2",
+            "DeploymentBucketName": "haoyin-fancy-todos-haoyin-20190510135840-deployment",
+            "UnauthRoleName": "haoyin-fancy-todos-haoyin-20190510135840-unauthRole",
+            "StackName": "haoyin-fancy-todos-haoyin-20190510135840",
+            "StackId": "arn:aws:cloudformation:ap-southeast-2:720854520170:stack/haoyin-fancy-todos-haoyin-20190510135840/21413250-72c7-11e9-a831-0ae3f52010f8"
+        },
+        "categories": {
+            "auth": {
+                "cognito552c4898": {}
+            }
+        }
+    }
+}
