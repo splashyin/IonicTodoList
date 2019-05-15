@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/ToDoItems",
+            "lambdaFunction": "yinhaoToDoItemsLambda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "yinhaoToDoItemsCRUDtest",
+    "apiName": "yinhaoToDoItemsCRUDtest",
+    "functionArns": [
+        {
+            "lambdaFunction": "yinhaoToDoItemsLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "haoyin-fancy-todos-haoyin-20190510135840-authRole",
+        "unAuthRoleName": "haoyin-fancy-todos-haoyin-20190510135840-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "yinhaoToDoItemsLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
