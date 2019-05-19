@@ -3,6 +3,9 @@ import { ModalController, Events } from '@ionic/angular';
 import { ToDoItem, ToDoList } from './../../classes/item.class';
 import { AmplifyService } from 'aws-amplify-angular';
 import { ListItemModal } from './list.item.modal';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { stringify } from 'querystring';
+
 @Component({
 
   selector: 'app-list',
@@ -16,9 +19,11 @@ export class ListPage implements OnInit {
   user: any;
   itemList: ToDoList | any;
   signedIn: boolean;
+  posturl: string;
 
   constructor(
     public modalController: ModalController,
+    private http: HttpClient,
     amplify: AmplifyService,
     events: Events
   ) {
@@ -99,6 +104,28 @@ export class ListPage implements OnInit {
     } else {
       console.log('Cannot get items: no active user');
     }
+  }
+
+  testapi() {
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+    let body = {
+      userId: 2
+    };
+    this.posturl = 'https://ubm35qj1uk.execute-api.ap-southeast-2.amazonaws.com/dev/selectCompany';
+
+    this.http.post(this.posturl, JSON.stringify(body), httpOptions).subscribe(
+      res => {
+        console.log(JSON.parse(res.toString()));
+      }, err => {
+        console.log('fail');
+      }
+    );
+
 
   }
 
